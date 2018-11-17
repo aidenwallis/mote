@@ -1,4 +1,4 @@
-import App from './app';
+import App from './App';
 
 import 'normalize.css/normalize.css';
 import './scss/app.scss';
