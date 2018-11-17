@@ -1,0 +1,93 @@
+@font-face {
+    font-family: 'yukarimobile';
+    src: url('fonts/yukari-webfont.woff2') format('woff2'),
+         url('fonts/yukari-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'yukarimobile', sans-serif;
+}
+
+#app {
+    width: 735px;
+    height: 150px;
+}
+
+@keyframes pop {
+    from {
+        transform: scale(0);
+    } to {
+        transform: scale(1);
+    }
+}
+
+.emote-wrapper {
+    position: relative;
+    float: left;
+    margin-right: 45px;
+    width: 100px;
+    height: 100px;
+    &:not(.emote-wrapper-large) {
+        margin-top: 50px;
+    }
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+.emote-image {
+    max-width: 70px;
+    max-height: 70px;
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: -1;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+.emote-counter {
+    font-size: 30px;
+    right: 0;
+    top: 0;
+    position: absolute;
+    color: #fff;
+    text-shadow: #000 3px 0px 0px, #000 2.83487px 0.981584px 0px, #000 2.35766px 1.85511px 0px, #000 1.62091px 2.52441px 0px, #000 0.705713px 2.91581px 0px, #000 -0.287171px 2.98622px 0px, #000 -1.24844px 2.72789px 0px, #000 -2.07227px 2.16926px 0px, #000 -2.66798px 1.37182px 0px, #000 -2.96998px 0.42336px 0px, #000 -2.94502px -0.571704px 0px, #000 -2.59586px -1.50383px 0px, #000 -1.96093px -2.27041px 0px, #000 -1.11013px -2.78704px 0px, #000 -0.137119px -2.99686px 0px, #000 0.850987px -2.87677px 0px, #000 1.74541px -2.43999px 0px, #000 2.44769px -1.73459px 0px, #000 2.88051px -0.838247px 0px;
+}
+
+.animated {
+    animation: pop .1s linear;
+}
+
+.emote-name {
+    position: absolute;
+    left: 50%;
+    font-family: 'Anton', sans-serif;
+    bottom: 0;
+    font-size: 20px;
+    transform: translateX(-50%);
+    color: #fff;
+    text-shadow: #000 3px 0px 0px, #000 2.83487px 0.981584px 0px, #000 2.35766px 1.85511px 0px, #000 1.62091px 2.52441px 0px, #000 0.705713px 2.91581px 0px, #000 -0.287171px 2.98622px 0px, #000 -1.24844px 2.72789px 0px, #000 -2.07227px 2.16926px 0px, #000 -2.66798px 1.37182px 0px, #000 -2.96998px 0.42336px 0px, #000 -2.94502px -0.571704px 0px, #000 -2.59586px -1.50383px 0px, #000 -1.96093px -2.27041px 0px, #000 -1.11013px -2.78704px 0px, #000 -0.137119px -2.99686px 0px, #000 0.850987px -2.87677px 0px, #000 1.74541px -2.43999px 0px, #000 2.44769px -1.73459px 0px, #000 2.88051px -0.838247px 0px;
+}
+
+.emote-wrapper-large {
+    width: 150px;
+    height: 150px;
+    .emote-image {
+        max-width: 100px;
+        max-height: 100px;
+    }
+    .emote-name {
+        font-size: 24px;
+    }
+    .emote-counter {
+        font-size: 34px;
+    }
+}
